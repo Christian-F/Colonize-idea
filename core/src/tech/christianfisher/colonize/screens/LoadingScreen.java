@@ -1,8 +1,16 @@
 package tech.christianfisher.colonize.screens;
 
 import com.badlogic.gdx.Screen;
+import tech.christianfisher.colonize.ColonizeGameClass;
 
 public class LoadingScreen implements Screen {
+
+    private ColonizeGameClass parent;
+
+    public LoadingScreen(ColonizeGameClass game){
+        parent = game;
+    }
+
 
     @Override
     public void show() {
@@ -11,7 +19,7 @@ public class LoadingScreen implements Screen {
 
     @Override
     public void render(float delta) {
-
+        parent.changeScreen(ColonizeGameClass.MENU);
     }
 
     @Override
