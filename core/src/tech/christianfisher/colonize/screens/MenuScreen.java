@@ -54,8 +54,8 @@ public class MenuScreen implements Screen {
         preferencesTBtn.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                //parent.changeScreen(ColonizeGameClass.PREFERENCES);
-                parent.setScreen(new PreferencesScreen(parent));
+                parent.changeScreen(ColonizeGameClass.PREFERENCES);
+                //parent.setScreen(new PreferencesScreen(parent));
                 System.out.println("Pref button clicked");
             }
         });
@@ -63,8 +63,8 @@ public class MenuScreen implements Screen {
         newGameTBtn.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                //parent.changeScreen(ColonizeGameClass.APPLICATION);
-                parent.setScreen(new MainScreen(parent));
+                parent.changeScreen(ColonizeGameClass.APPLICATION);
+                //parent.setScreen(new MainScreen(parent));
             }
         });
     }
@@ -99,7 +99,6 @@ public class MenuScreen implements Screen {
 
     @Override
     public void dispose() {
-        stage.clear();
         stage.dispose();
     }
 }

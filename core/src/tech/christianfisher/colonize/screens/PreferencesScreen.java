@@ -27,6 +27,7 @@ public class PreferencesScreen implements Screen {
     private Label soundOnOffLabel;
 
     public PreferencesScreen(ColonizeGameClass game){
+
         parent = game;
         skinPath = "glassy/skin/glassy-ui.json";
         stage = new Stage(new ScreenViewport());
@@ -149,6 +150,7 @@ public class PreferencesScreen implements Screen {
 
     @Override
     public void dispose() {
+        stage.clear();
         stage.dispose();
     }
 }
